@@ -4,6 +4,8 @@ from collections import Counter
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
+from faceit.models.players import MatchResult
+
 if TYPE_CHECKING:
     from faceit.models import CS2MatchPlayerStats, ItemPage
 
@@ -54,7 +56,7 @@ def analyze_cs2_recent_matches(
         sum_hs += m.headshots_percentage
 
         map_counts[m.map] += 1
-        if m.result == 1:
+        if m.result is MatchResult.WIN:
             wins += 1
             map_wins[m.map] += 1
 

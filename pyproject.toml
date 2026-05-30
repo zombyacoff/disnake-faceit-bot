@@ -1,11 +1,11 @@
 [project]
 name = "disnake-faceit-bot"
-version = "1.0.0"
+version = "1.0.1"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "disnake>=2.0.0",
-    "faceit[env]>=0.3.0",
+    "faceit[env]>=0.3.1",
 ]
 
 [dependency-groups]
@@ -50,23 +50,6 @@ ignore = [
 
 [tool.ruff.lint.isort]
 required-imports = ["from __future__ import annotations"]
-
-[tool.ruff.lint.flake8-import-conventions]
-banned-from = [
-    "asyncio",
-    "decouple",
-    "httpx",
-    "inspect",
-    "json",
-    "logging",
-    "math",
-    "os",
-    "random",
-    "re",
-    "reprlib",
-    "tenacity",
-    "warnings",
-]
 
 [tool.ruff.lint.flake8-type-checking]
 exempt-modules = ["disnake"]

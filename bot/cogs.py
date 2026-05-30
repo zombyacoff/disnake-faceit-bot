@@ -8,7 +8,7 @@ import faceit
 import pydantic
 from disnake.ext import commands
 from disnake.interactions import ApplicationCommandInteraction
-from faceit.constants import FACEIT_COLOR
+from faceit.constants import FACEIT_PRIMARY_COLOR
 from faceit.models.players import GameInfo, MatchResult
 
 from .analysis import analyze_cs2_recent_matches
@@ -186,7 +186,10 @@ class StatsCommand(FaceitCog):
             )
             return None
 
-        embed = disnake.Embed(url=player.faceit_url, color=FACEIT_COLOR)
+        embed = disnake.Embed(
+            url=player.faceit_url,
+            color=FACEIT_PRIMARY_COLOR,
+        )
         if player.avatar:
             embed.set_thumbnail(url=player.avatar)
         embed.set_footer(text="Powered by faceit-python")

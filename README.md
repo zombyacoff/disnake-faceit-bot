@@ -1,4 +1,4 @@
-# FACEIT Discord Bot
+# FACEIT Discord Bot (for CS2 stats)
 
 The official showcase example for the [faceit-python](https://github.com/zombyacoff/faceit-python/) library, built using [disnake](https://github.com/DisnakeDev/disnake).
 

@@ -14,7 +14,7 @@ class FaceitBot(commands.InteractionBot):
         self.data: faceit.AsyncDataResource | None = None
         super().__init__(**kwargs)
 
-    async def start(self, token: str, *, reconnect: bool = True) -> None:  # type: ignore[override]
+    async def start(self, token: str, **kwargs: Any) -> None:  # type: ignore[override]
         async with faceit.AsyncDataResource() as data:
             self.data = data
-            await super().start(token, reconnect=reconnect)
+            await super().start(token, **kwargs)

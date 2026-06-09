@@ -1,13 +1,13 @@
 # Environments
 .env
 .venv
-env/
-venv/
 ENV/
 env.bak/
+env/
 venv.bak/
+venv/
 
-# IDE
+# IDE settings
 .vscode
 .zed
 
@@ -15,12 +15,12 @@ venv.bak/
 justfile
 
 # Python-generated files
-__pycache__/
+*.egg-info
 *.py[oc]
+__pycache__/
 build/
 dist/
 wheels/
-*.egg-info
 
 # uv
 uv.lock

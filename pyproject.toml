@@ -37,6 +37,7 @@ ignore = [
     "D",       # pydocstyle docstring violations
     "DOC",     # pydoclint docstring validation violations
     "E501",    # Line too long
+    "EM101",   # Exception must not use a string literal
     "FIX002",  # TODO comment detected
     "PLR0904", # Too many public methods
     "PLR0913", # Too many function arguments
@@ -46,6 +47,7 @@ ignore = [
     "SLF001",  # Private member accessed outside class
     "T201",    # `print()` statement detected
     "TD",      # flake8-todos violations
+    "TRY003"   # Avoid specifying long messages outside the exception class
 ]
 
 [tool.ruff.lint.isort]

@@ -29,8 +29,7 @@ class FaceitCog(commands.Cog):
     def faceit_data(self) -> faceit.AsyncDataResource:
         if self.bot.data is not None:
             return self.bot.data
-        msg = "FACEIT API data resource is not initialized."
-        raise RuntimeError(msg)
+        raise RuntimeError("FACEIT API data resource is not initialized.")
 
 
 class StatsCommand(FaceitCog):

@@ -14,7 +14,6 @@ if TYPE_CHECKING:
 class MatchAnalysis:
     total: int
     wins: int
-    win_rate: float
     avg_kd: float
     avg_adr: float
     avg_hs_pct: float
@@ -25,6 +24,10 @@ class MatchAnalysis:
     most_played_map_count: int
     best_map: str | None
     best_map_win_rate: float | None
+
+    @property
+    def win_rate(self) -> float:
+        return self.wins / self.total * 100
 
     @property
     def losses(self) -> int:
@@ -73,7 +76,6 @@ def analyze_cs2_recent_matches(
     return MatchAnalysis(
         total=total,
         wins=wins,
-        win_rate=wins / total * 100,
         avg_kd=sum_kd / total,
         avg_adr=sum_adr / total,
         avg_hs_pct=sum_hs / total,
